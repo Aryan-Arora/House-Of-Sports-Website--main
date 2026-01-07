@@ -27,7 +27,6 @@ export const VENUES: Venue[] = [
   { id: 'f10', name: 'Summerfields GK1 & GK2', location: 'GK', price: 250, monthlyPlayers: '30+', sport: 'Football', imageUrl: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800' },
   { id: 'f11', name: 'Pitampura SD Public', location: 'Pitampura', price: 250, monthlyPlayers: '30+', sport: 'Football', imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800' },
   { id: 'f12', name: 'Paramount Dwarka', location: 'Dwarka', price: 200, monthlyPlayers: '80+', sport: 'Football', imageUrl: 'https://images.unsplash.com/photo-1556056504-5c7696c4c28d?q=80&w=800' },
-  { id: 'f13', name: 'OPG World School', location: 'Delhi', price: 200, monthlyPlayers: '20+', sport: 'Football', imageUrl: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800' },
 
   // Volleyball
   { id: 'v1', name: 'St Frobel', location: 'Paschim Vihar', price: 150, monthlyPlayers: '20+', sport: 'Volleyball', imageUrl: 'https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=800' },
@@ -51,6 +50,7 @@ export const USPS: USP[] = [
   { title: 'Fair Play & Discipline', icon: 'ShieldCheck', description: 'Strong emphasis on sportsmanship, safety, and respect, both on and off the field.' },
   { title: 'Accessible for All', icon: 'Zap', description: 'Beginners, intermediates, and advanced players all have space within the HOS ecosystem.' },
   { title: 'Player-Driven Growth', icon: 'TrendingUp', description: 'Teams, captains, and regular players are actively involved in shaping games and experiences.' },
+  { title: 'Tournaments & Leagues', icon: 'Trophy', description: 'Regular competitive events and leagues for those looking to test their skills at the highest level.' },
 ];
 
 export const STATS: Stat[] = [

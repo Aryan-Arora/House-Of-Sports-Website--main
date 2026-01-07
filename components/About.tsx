@@ -18,19 +18,19 @@ export const About: React.FC = () => {
             PLATFORM, <br />
             A COMMUNITY.
           </h2>
-          <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
-              House of Sports (HOS) started as a simple response to a clear gap in the sports ecosystem. 
-              While interest in sports was growing, access to structured play, good facilities, and real 
+              House of Sports (HOS) started as a simple response to a clear gap in the sports ecosystem.
+              While interest in sports was growing, access to structured play, good facilities, and real
               sporting communities was still limited.
             </p>
             <p>
-              HOS was built to change that. It focuses on bringing people together through sport, 
-              offering consistent opportunities to play while encouraging discipline, fairness, 
+              HOS was built to change that. It focuses on bringing people together through sport,
+              offering consistent opportunities to play while encouraging discipline, fairness,
               and long-term growth.
             </p>
-            <p className="font-bold text-black italic">
-              Today, HOS is a growing ecosystem where athletes, enthusiasts, and beginners 
+            <p className="font-bold text-white italic">
+              Today, HOS is a growing ecosystem where athletes, enthusiasts, and beginners
               come together to play, compete, and grow, both on and off the field.
             </p>
           </div>
@@ -44,8 +44,8 @@ export const About: React.FC = () => {
           className="relative"
         >
           <div className="aspect-[4/5] overflow-hidden rounded-3xl">
-            <img 
-              src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=1000" 
+            <img
+              src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=1000"
               alt="Community Focus"
               className="w-full h-full object-cover"
             />

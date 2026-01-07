@@ -16,21 +16,21 @@ export const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'USPs', href: '#usp' },
-    { name: 'Play', href: '#play' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Play', href: '/#play' },
     { name: 'Community', href: '#' },
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
+        }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="bg-black text-white p-2 rounded-lg">
+          <div className={`p-2 rounded-lg transition-colors ${isScrolled ? 'bg-white text-black' : 'bg-black text-white'}`}>
             <Trophy size={24} />
           </div>
           <span className="font-syncopate font-bold text-xl tracking-tight">HOS</span>
@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
               className="text-sm font-semibold uppercase tracking-widest hover:text-gray-500 transition-colors"
@@ -47,13 +47,14 @@ export const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <button className="bg-black text-white px-6 py-2 rounded-full font-bold text-sm tracking-widest hover:bg-gray-800 transition-colors">
+          <button className={`px-6 py-2 rounded-full font-bold text-sm tracking-widest transition-colors ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'
+            }`}>
             JOIN NOW
           </button>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -62,14 +63,14 @@ export const Header: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <motion.div 
+      <motion.div
         initial={false}
         animate={isMobileMenuOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
         className="md:hidden overflow-hidden bg-white"
       >
         <div className="px-6 py-8 flex flex-col gap-6">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
               className="text-lg font-bold uppercase"

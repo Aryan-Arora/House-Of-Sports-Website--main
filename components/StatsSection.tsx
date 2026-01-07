@@ -5,7 +5,7 @@ import { STATS } from '../constants';
 
 export const StatsSection: React.FC = () => {
   return (
-    <div className="bg-black text-white py-24">
+    <div className="bg-white text-black py-24 border-b border-gray-100">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-6">
           {STATS.map((stat, index) => (
@@ -18,7 +18,7 @@ export const StatsSection: React.FC = () => {
               className="text-center"
             >
               <div className="text-5xl md:text-6xl font-syncopate font-bold mb-4">{stat.value}</div>
-              <div className="text-gray-400 text-sm tracking-widest uppercase font-semibold">{stat.label}</div>
+              <div className="text-gray-600 text-sm tracking-widest uppercase font-semibold">{stat.label}</div>
             </motion.div>
           ))}
         </div>

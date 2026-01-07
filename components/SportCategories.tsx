@@ -18,14 +18,14 @@ export const SportCategories: React.FC<Props> = ({ selectedSport, onSelect }) =>
           key={sport}
           onClick={() => onSelect(sport)}
           className={`relative px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${
-            selectedSport === sport ? 'text-white' : 'text-gray-400 hover:text-black'
+            selectedSport === sport ? 'text-black' : 'text-gray-500 hover:text-white'
           }`}
         >
           <span className="relative z-10">{sport}</span>
           {selectedSport === sport && (
             <motion.div
               layoutId="activeTab"
-              className="absolute inset-0 bg-black rounded-full"
+              className="absolute inset-0 bg-white rounded-full"
               transition={{ type: 'spring', duration: 0.6 }}
             />
           )}

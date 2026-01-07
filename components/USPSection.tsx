@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Layout, ShieldCheck, Zap, TrendingUp } from 'lucide-react';
+import { Users, Layout, ShieldCheck, Zap, TrendingUp, Trophy } from 'lucide-react';
 import { USPS } from '../constants';
 
 const iconMap: any = {
@@ -10,6 +10,7 @@ const iconMap: any = {
   ShieldCheck: ShieldCheck,
   Zap: Zap,
   TrendingUp: TrendingUp,
+  Trophy: Trophy,
 };
 
 export const USPSection: React.FC = () => {
