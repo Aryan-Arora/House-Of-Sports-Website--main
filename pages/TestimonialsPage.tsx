@@ -11,27 +11,27 @@ const TestimonialsPage: React.FC = () => {
     const testimonials = [
         {
             id: 1,
-            name: "Rohan Mehta",
-            role: "Badminton Regular",
-            content: "HOS isn't just about booking a court. It's the community. I found my regular playing group here, and now we play twice a week without fail. The vibe is unmatched.",
+            name: "Iris",
+            role: "Footballer & Photographer",
+            content: "Inspired by Mbappé's flair, I've spent the last year honing my skills here. The variety of venues has been a game-changer for my growth, and the experiences I've had on the field are just as memorable as the moments I capture behind the lens.",
             rating: 5,
-            avatar: "RM"
+            avatar: "IR"
         },
         {
             id: 2,
-            name: "Priya Sharma",
-            role: "Football Captain",
-            content: "The level of organization is impressive. From the turf quality to the matchmaking, everything is professional. My team has grown so much playing in the weekend leagues.",
+            name: "Tashvi",
+            role: "Pioneer Footballer",
+            content: "Stepping onto the pitch as the first female player here was a big moment. The community welcomed me with open arms—playing alongside the guys feels completely natural. It’s a safe, encouraging space where I can just play my game.",
             rating: 5,
-            avatar: "PS"
+            avatar: "TA"
         },
         {
             id: 3,
-            name: "Arjun Singh",
-            role: "Weekend Warrior",
-            content: "I started as a beginner, intimidated by the sport. But the 'Accessible for All' approach is real. I felt welcomed, coached, and now I'm competing in intermediate brackets!",
+            name: "Wani",
+            role: "Influencer & Player",
+            content: "Weekends are for unwinding, and I've found my rhythm in the B division games here. It’s the perfect escape—good competition, great company, and the ideal way to disconnect and recharge.",
             rating: 5,
-            avatar: "AS"
+            avatar: "WA"
         }
     ];
 

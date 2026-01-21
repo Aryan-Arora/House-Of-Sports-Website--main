@@ -9,8 +9,8 @@ export const About: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
         >
           <span className="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-6 block">OUR ORIGIN</span>
           <h2 className="text-4xl md:text-6xl font-syncopate font-bold mb-10 leading-tight">

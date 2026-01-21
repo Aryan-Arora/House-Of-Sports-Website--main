@@ -34,16 +34,19 @@ export const VenueGrid: React.FC<Props> = ({ sport }) => {
                 <span className="text-xs font-bold text-black">{venue.monthlyPlayers} Players / mo</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                <button className="w-full bg-white text-black py-3 rounded-xl font-bold uppercase text-xs tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform hover:bg-gray-200">
+                <button
+                  onClick={() => window.open('https://wa.me/918076930593?text=Hi%2C%20I%20would%20like%20to%20book%20a%20slot', '_blank')}
+                  className="w-full bg-white text-black py-3 rounded-xl font-bold uppercase text-xs tracking-widest translate-y-4 group-hover:translate-y-0 transition-transform hover:bg-gray-200"
+                >
                   Book A Slot
                 </button>
               </div>
             </div>
 
             <div className="p-8 flex-1 flex flex-col">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">{venue.name}</h3>
-                <div className="flex items-center text-green-400 font-bold">
+              <div className="flex justify-between items-start mb-4 gap-4">
+                <h3 className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors flex-1">{venue.name}</h3>
+                <div className="flex items-center text-green-400 font-bold flex-shrink-0 whitespace-nowrap">
                   <IndianRupee size={16} />
                   <span className="text-lg">{venue.price} <span className="text-xs text-gray-500 font-normal">/ pp</span></span>
                 </div>

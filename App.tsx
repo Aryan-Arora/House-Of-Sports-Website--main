@@ -4,7 +4,9 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import TestimonialsPage from './pages/TestimonialsPage';
+import ShopPage from './pages/ShopPage';
+import PlayPage from './pages/PlayPage';
+import CommunityPage from './pages/CommunityPage';
 
 // ScrollToTop component to handle scroll restoration on route change
 const ScrollToTop = () => {
@@ -25,7 +27,9 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/play" element={<PlayPage />} />
+          <Route path="/community" element={<CommunityPage />} />
         </Routes>
 
         <Footer />

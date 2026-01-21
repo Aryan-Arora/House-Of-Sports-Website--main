@@ -1,12 +1,39 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Layout, ShieldCheck, Zap, TrendingUp, Trophy, Play } from 'lucide-react';
+import { Users, Layout, ShieldCheck, Zap, TrendingUp, Trophy, Play, Star, Quote } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const testimonials = [
+        {
+            id: 1,
+            name: "Iris",
+            role: "Footballer & Photographer",
+            content: "I've always tried to play with a bit of flair, and honestly, this place just gets it. The pitches are quality, which helps, but it's really about the vibe. I'm a photographer, so I usually watch life through a lens, but here? I'm fully in the moment. It's just... fun.",
+            rating: 5,
+            avatar: "IR"
+        },
+        {
+            id: 2,
+            name: "Tashvi",
+            role: "Pioneer Footballer",
+            content: "I was actually the first girl to play here, so yeah, was a bit nervous at first! But everyone was super chill. No weirdness, just football. It feels really safe, and honestly, the guys here are great—they just want a good game like anyone else.",
+            rating: 5,
+            avatar: "TA"
+        },
+        {
+            id: 3,
+            name: "Wani",
+            role: "Influencer & Player",
+            content: "My weekends are sacred, you know? After a long work week, I just need to switch off. The B division games here are perfect for that. It's competitive enough to be fun, but not stressful. Just good vibes and good football.",
+            rating: 5,
+            avatar: "WA"
+        }
+    ];
 
     const usps = [
         { title: 'Community-First Model', icon: Users, description: 'HOS is not just a booking platform—it’s a sports community where players return regularly and grow together.' },
@@ -129,6 +156,46 @@ const AboutPage: React.FC = () => {
                                 <p className="text-gray-400 leading-relaxed text-sm">
                                     {usp.description}
                                 </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            {/* Community Reviews Section (Moved from Testimonials) */}
+            <section className="py-24 px-6 bg-gray-50 text-black">
+                <div className="container mx-auto">
+                    <h2 className="text-3xl font-bold font-syncopate mb-12 text-center">COMMUNITY REVIEWS</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {testimonials.map((testimonial, index) => (
+                            <motion.div
+                                key={testimonial.id}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-white p-8 rounded-3xl relative hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                            >
+                                <Quote className="absolute top-8 right-8 text-gray-200 w-10 h-10" />
+
+                                <div className="flex gap-1 mb-6">
+                                    {[...Array(testimonial.rating)].map((_, i) => (
+                                        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                                    ))}
+                                </div>
+
+                                <p className="text-gray-700 text-lg leading-relaxed mb-8 italic font-medium">
+                                    "{testimonial.content}"
+                                </p>
+
+                                <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+                                    <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center font-bold font-syncopate text-sm">
+                                        {testimonial.avatar}
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                                        <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">{testimonial.role}</p>
+                                    </div>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

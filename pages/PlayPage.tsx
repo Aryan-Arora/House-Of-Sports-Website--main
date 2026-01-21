@@ -1,43 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Hero } from '../components/Hero';
-import { StatsSection } from '../components/StatsSection';
-import { USPSection } from '../components/USPSection';
-import { About } from '../components/About';
 import { SportCategories } from '../components/SportCategories';
 import { VenueGrid } from '../components/VenueGrid';
 import { SportType } from '../types';
 
-export const HomePage: React.FC = () => {
+const PlayPage: React.FC = () => {
     const [selectedSport, setSelectedSport] = useState<SportType>('Football');
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <main>
-            <section id="home">
-                <Hero />
-            </section>
-
-            <section id="about" className="py-20 bg-black text-white">
-                <About />
-            </section>
-
-            <section id="stats">
-                <StatsSection />
-            </section>
-
-            <section id="usp" className="py-20 bg-white text-black">
-                <USPSection />
-            </section>
-
-            <section id="play" className="py-20 bg-black text-white">
+        <main className="bg-black min-h-screen text-white pt-20">
+            <section className="py-20">
                 <div className="container mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-4xl md:text-5xl font-syncopate font-bold mb-4">CHOOSE YOUR SPORT</h2>
+                        <h1 className="text-4xl md:text-5xl font-syncopate font-bold mb-4">CHOOSE YOUR SPORT</h1>
                         <p className="text-gray-400 max-w-2xl mx-auto">
                             Explore our wide range of sporting activities across top-tier venues in the city.
                         </p>
@@ -65,3 +48,5 @@ export const HomePage: React.FC = () => {
         </main>
     );
 };
+
+export default PlayPage;

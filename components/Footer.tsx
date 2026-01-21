@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Trophy, Instagram, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Trophy, Instagram, Facebook, Twitter, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -15,13 +15,22 @@ export const Footer: React.FC = () => {
               <span className="font-syncopate font-bold text-2xl tracking-tight">HOS</span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-8">
-              A growing sports community where athletes, enthusiasts, and beginners 
+              A growing sports community where athletes, enthusiasts, and beginners
               come together to play, compete, and grow, both on and off the field.
             </p>
             <div className="flex gap-4">
-              <SocialIcon icon={<Instagram size={20} />} />
-              <SocialIcon icon={<Facebook size={20} />} />
-              <SocialIcon icon={<Twitter size={20} />} />
+              <SocialIcon
+                href="https://wa.me/918076930593?text=i%20need%20some%20support%20or%20i%20have%20a%20grievance"
+                icon={<MessageCircle size={20} />}
+              />
+              <SocialIcon
+                href="https://www.instagram.com/hos_house.of.sports?igsh=MWQ4YTd6NXd3a3Rsdg%3D%3D&utm_source=qr"
+                icon={<Instagram size={20} />}
+              />
+              <SocialIcon
+                href="mailto:Houseofsports.hos@gmail.com"
+                icon={<Mail size={20} />}
+              />
             </div>
           </div>
 
@@ -51,11 +60,11 @@ export const Footer: React.FC = () => {
             <ul className="space-y-6 text-gray-400">
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-lg"><Phone size={18} /></div>
-                <span>+91 99999 88888</span>
+                <span>+91 80769 30593</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-lg"><Mail size={18} /></div>
-                <span>play@houseofsports.com</span>
+                <span>Houseofsports.hos@gmail.com</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-lg"><MapPin size={18} /></div>
@@ -79,8 +88,13 @@ export const Footer: React.FC = () => {
   );
 };
 
-const SocialIcon = ({ icon }: { icon: React.ReactNode }) => (
-  <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+const SocialIcon = ({ icon, href }: { icon: React.ReactNode; href: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+  >
     {icon}
   </a>
 );

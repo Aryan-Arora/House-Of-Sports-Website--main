@@ -18,9 +18,9 @@ export const Header: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Play', href: '/#play' },
-    { name: 'Community', href: '#' },
+    { name: 'Shop', href: '/shop' },
+    { name: 'Play', href: '/play' },
+    { name: 'Community', href: '/community' },
   ];
 
   return (
@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
         }`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="w-full px-6 md:px-12 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className={`p-2 rounded-lg transition-colors ${isScrolled ? 'bg-white text-black' : 'bg-black text-white'}`}>
             <Trophy size={24} />
@@ -47,8 +47,11 @@ export const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <button className={`px-6 py-2 rounded-full font-bold text-sm tracking-widest transition-colors ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'
-            }`}>
+          <button
+            onClick={() => window.open('https://wa.me/918076930593?text=I%20wish%20to%20play', '_blank')}
+            className={`px-6 py-2 rounded-full font-bold text-sm tracking-widest transition-colors ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'
+              }`}
+          >
             JOIN NOW
           </button>
         </div>
@@ -79,7 +82,10 @@ export const Header: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <button className="bg-black text-white px-6 py-4 rounded-xl font-bold text-lg uppercase">
+          <button
+            onClick={() => window.open('https://wa.me/918076930593?text=I%20wish%20to%20play', '_blank')}
+            className="bg-black text-white px-6 py-4 rounded-xl font-bold text-lg uppercase"
+          >
             JOIN COMMUNITY
           </button>
         </div>
